@@ -3,16 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package swing;
 
+
+import java.awt.Color;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class calculator
+public class Calculator
 {
     public static void main(String args[])
     {
         JFrame f=new JFrame("calculator");
+        
         JTextField jt1=new JTextField();
         JTextField jt2=new JTextField();
         JButton b1=new JButton("add");
@@ -22,14 +24,14 @@ public class calculator
         JLabel l=new JLabel();
         
         jt1.setBounds(100,100,140,40);
-        jt2.setBounds(100,150,140,40);
+        jt2.setBounds(300,100,140,40);
         
         b1.setBounds(100,220,160,50);
-        b2.setBounds(100,300,160,50);
-        b3.setBounds(100,380,160,50);
-        b4.setBounds(100,450,160,50);
+        b2.setBounds(300,220,160,50);
+        b3.setBounds(100,300,160,50);
+        b4.setBounds(300,300,160,50);
         
-        l.setBounds(300,200,180,50);
+        l.setBounds(190,160,180,50);
         
         f.add(jt1);f.add(jt2);
         f.add(b4);f.add(b3);f.add(b2);f.add(b1);f.add(l);
@@ -80,9 +82,9 @@ public class calculator
         {
             public void actionPerformed(ActionEvent e)
             {
-                int a = Integer.parseInt(jt1.getText());
-                int b= Integer.parseInt(jt2.getText());
-                int divide=a/b;
+                float a = Integer.parseInt(jt1.getText());
+                float b= Integer.parseInt(jt2.getText());
+                float divide=a/b;
                 String s3=String.valueOf(divide);
                 l.setText("Answer is : "+ s3); 
                 
